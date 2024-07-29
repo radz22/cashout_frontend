@@ -1,9 +1,10 @@
 import React from "react";
-import SignUpForm from "../components/auth/signUpForm";
-import { Link } from "react-router-dom";
 import { Toaster } from "react-hot-toast";
+import VerifyRecoveryOTP from "../components/auth/verifyRecoveryOTP";
+import sessionRecovery from "../components/sessionDataUser/sessionUserName";
+const ForgotRecoveryPage = () => {
+  const { userName, id, otp } = sessionRecovery();
 
-const SignUpPage = () => {
   return (
     <div>
       <Toaster position="top-center" reverseOrder={false} />
@@ -15,7 +16,7 @@ const SignUpPage = () => {
           />
         </div>
         <div className="absolute inset-0 flex items-center justify-center">
-          <div className="relative h-[94vh] w-[55%] px-20 bg-[#fefefe] rounded-lg	 shadow-lg mt-10">
+          <div className="relative h-auto w-[55%] px-20 bg-[#fefefe] rounded-lg	 shadow-lg py-5">
             <div className="absolute inset-x-0 top-[-40px] flex justify-center">
               <div className="bg-[#fff] p-5 rounded-full shadow-lg shadow-[#f4f4f4]">
                 {" "}
@@ -30,29 +31,16 @@ const SignUpPage = () => {
             <div className="mt-[100px]">
               <div>
                 <h1 className="text-4xl	text-center tracking-wide	font-bold text-[#3cb8d9]">
-                  Sign Up
+                  Recovery Otp
                 </h1>
+                <p className="mt-4 text-[#b3b3b3]">
+                  Please enter the 4 digit code your username
+                  <span className="text-[#3cb8d9] ml-2">{userName}</span>
+                </p>
               </div>
 
               <div>
-                <SignUpForm />
-              </div>
-              <div className="mt-5 flex items-center justify-between w-full">
-                <div>
-                  <Link to="/">
-                    {" "}
-                    <h2 className="text-[#3cb8d9] text-xl font-bold">
-                      Already have an account ? Sign in
-                    </h2>
-                  </Link>
-                </div>
-                <div>
-                  <Link to="/forgotpassword">
-                    <h2 className="text-[#3cb8d9] text-xl font-bold">
-                      Forgot password?
-                    </h2>
-                  </Link>
-                </div>
+                <VerifyRecoveryOTP id={id} otp={otp} />
               </div>
             </div>
           </div>
@@ -62,4 +50,4 @@ const SignUpPage = () => {
   );
 };
 
-export default SignUpPage;
+export default ForgotRecoveryPage;

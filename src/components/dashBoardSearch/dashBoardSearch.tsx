@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import DashBoardData from "../../hooks/dashBoardData";
 import { dashBoardDataType } from "../../types/dashBoardDataType";
+import NoSearchImage from "../../assets/referrencenoSearch.png";
 const DashBoardSearch = () => {
   const { data } = DashBoardData();
   const [searchTerm, setSearchTerm] = useState<string>("");
@@ -141,9 +142,7 @@ const DashBoardSearch = () => {
           <div>
             {userData.length == 0 ? (
               <div>
-                <h1 className="text-2xl mt-10 text-center font-serif">
-                  REFERRENCE NOT FOUND
-                </h1>
+                <img src={NoSearchImage} />
               </div>
             ) : (
               <>

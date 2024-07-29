@@ -6,8 +6,11 @@ import HomePage from "./pages/homePage";
 import Login from "./components/cookiesLogin/login";
 import VerifyPage from "./pages/verifyPage";
 import ProgressPage from "./pages/progressPage";
+import ForgotPasswordPage from "./pages/forgotPasswordPage";
+import ForgotRecoveryPage from "./pages/forgotRecoveryPage";
 function App() {
   const { value } = Login();
+
   return (
     <>
       <BrowserRouter>
@@ -23,6 +26,8 @@ function App() {
             path="/progress"
             element={value == "true" ? <ProgressPage /> : <SignInPage />}
           />
+          <Route path="/forgotpassword" element={<ForgotPasswordPage />} />
+          <Route path="/recoveryaccount" element={<ForgotRecoveryPage />} />
         </Routes>
       </BrowserRouter>
     </>

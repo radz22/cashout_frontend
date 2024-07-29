@@ -47,10 +47,11 @@ const SignInPage = () => {
                   </Link>
                 </div>
                 <div>
-                  {" "}
-                  <h2 className="text-[#3cb8d9] text-xl font-bold">
-                    Forgot password?
-                  </h2>
+                  <Link to="/forgotpassword">
+                    <h2 className="text-[#3cb8d9] text-xl font-bold">
+                      Forgot password?
+                    </h2>
+                  </Link>
                 </div>
               </div>
             </div>

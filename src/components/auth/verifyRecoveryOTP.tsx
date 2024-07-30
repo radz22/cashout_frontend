@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { ErrorAlert } from "../alert/alert";
-import { SucessAlert } from "../alert/alert";
 import Loading from "../looading/loading";
 import { Link } from "react-router-dom";
 import { useForm, SubmitHandler } from "react-hook-form";

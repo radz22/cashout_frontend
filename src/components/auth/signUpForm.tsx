@@ -11,13 +11,13 @@ const SignUpForm = () => {
     shouldUseNativeValidation: true,
   });
   const { loading, handleGetRandomOtp } = signupOtpEmail(
-    "http://localhost:4000/otpRoutes/otp"
+    "https://cashout-backend-kjtw.onrender.com/otpRoutes/otp"
   );
   const { handleErrorAlert } = ErrorAlert();
   const onSubmit: SubmitHandler<signUpFormType> = async (data) => {
     try {
       axios
-        .post("http://localhost:4000/userRoutes/checking", {
+        .post("https://cashout-backend-kjtw.onrender.com/userRoutes/checking", {
           email: data.email,
         })
         .then(() => {

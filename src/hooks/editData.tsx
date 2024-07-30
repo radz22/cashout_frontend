@@ -11,11 +11,14 @@ const editData = () => {
     try {
       setEditLoading(true);
       axios
-        .put(`http://localhost:4000/dataUserRoutes/edit/${data.id}`, {
-          amount: data.amount,
-          referrence: data.referrence,
-          date: data.date,
-        })
+        .put(
+          `https://cashout-backend-kjtw.onrender.com/dataUserRoutes/edit/${data.id}`,
+          {
+            amount: data.amount,
+            referrence: data.referrence,
+            date: data.date,
+          }
+        )
         .then(() => {
           handleSucessAlert("Edit Sucess");
           setEditLoading(false);

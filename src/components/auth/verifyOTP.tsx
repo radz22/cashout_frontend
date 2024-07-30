@@ -1,4 +1,3 @@
-import React from "react";
 import { useForm, SubmitHandler } from "react-hook-form";
 import { verifyOTPType } from "../../types/verifyOTPType";
 import sessionOTP from "../sessionOTP/sessionOTP";
@@ -17,10 +16,10 @@ const VerifyOTP = () => {
   const { otp } = sessionOTP();
 
   const { handleSignUp, buttonLoading } = signup(
-    "http://localhost:4000/userRoutes/signup"
+    "https://cashout-backend-kjtw.onrender.com/userRoutes/signup"
   );
   const { handleGetRandomOtp, loading } = signupOtpEmail(
-    "http://localhost:4000/otpRoutes/otp"
+    "https://cashout-backend-kjtw.onrender.com/otpRoutes/otp"
   );
   const onSubmit: SubmitHandler<verifyOTPType> = async (data) => {
     if (data.otp == otp) {

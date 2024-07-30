@@ -9,9 +9,12 @@ const updateUser = () => {
     setUpdateLoading(true);
     try {
       axios
-        .put(`http://localhost:4000/userRoutes/updateaccount/${id}`, {
-          password: password,
-        })
+        .put(
+          `https://cashout-backend-kjtw.onrender.com/userRoutes/updateaccount/${id}`,
+          {
+            password: password,
+          }
+        )
         .then(() => {
           setUpdateLoading(false);
           sessionStorage.removeItem("recoverid");

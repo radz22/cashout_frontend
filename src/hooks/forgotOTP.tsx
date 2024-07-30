@@ -1,4 +1,3 @@
-import React from "react";
 import { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
@@ -13,9 +12,12 @@ const forgotOTP = () => {
     setLoading(true);
     try {
       axios
-        .post("http://localhost:4000/userRoutes/forgotpasswordOtp", {
-          email: email,
-        })
+        .post(
+          "https://cashout-backend-kjtw.onrender.com/userRoutes/forgotpasswordOtp",
+          {
+            email: email,
+          }
+        )
         .then((res) => {
           handleSucessAlert("Sucess to Send OTP");
           sessionStorage.setItem("recoveryotp", res.data.otp);

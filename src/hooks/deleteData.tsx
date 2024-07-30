@@ -6,7 +6,9 @@ const deleteData = () => {
   const handleDelete = (id: string | null) => {
     try {
       axios
-        .delete(`http://localhost:4000/dataUserRoutes/delete/${id}`)
+        .delete(
+          `https://cashout-backend-kjtw.onrender.com/dataUserRoutes/delete/${id}`
+        )
         .then(() => {
           handleSucessAlert("Deleted");
         })

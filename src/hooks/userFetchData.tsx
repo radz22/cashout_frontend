@@ -8,7 +8,9 @@ const userFetchingData = (token: string | undefined) => {
     const userFetchData = async () => {
       try {
         axios
-          .get(`http://localhost:4000/userRoutes/getUserData/${token}`)
+          .get(
+            `https://cashout-backend-kjtw.onrender.com/userRoutes/getUserData/${token}`
+          )
           .then((res) => {
             getCookiesValue.set("username", res.data.username, { expires: 2 });
           })

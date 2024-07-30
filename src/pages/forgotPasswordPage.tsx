@@ -1,9 +1,8 @@
-import React, { useState } from "react";
 import { Toaster } from "react-hot-toast";
 import forgotOTP from "../hooks/forgotOTP";
 import Loading from "../components/looading/loading";
 import { useForm, SubmitHandler } from "react-hook-form";
-
+import { Link } from "react-router-dom";
 type forgotPassword = {
   email: string;
 };
@@ -66,7 +65,12 @@ const ForgotPasswordPage = () => {
                   />
                 </div>
               </div>
-              <div className="mt-6">
+              <div className="flex items-center justify-center w-full">
+                <p className=" mt-5 text-[#3cb8d9] text-xl font-semibold border-b-[2px] border-[#3cb8d9] w-fit">
+                  <Link to="/"> Sign In</Link>
+                </p>
+              </div>
+              <div className="mt-2">
                 <button
                   className="bg-[#3cb8d9] w-full py-5 px-5 text-2xl font-semibold text-white rounded-full hover:bg-[#5710b3] mt-5"
                   type="submit"

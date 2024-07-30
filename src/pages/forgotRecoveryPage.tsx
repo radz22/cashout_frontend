@@ -1,4 +1,3 @@
-import React from "react";
 import { Toaster } from "react-hot-toast";
 import VerifyRecoveryOTP from "../components/auth/verifyRecoveryOTP";
 import sessionRecovery from "../components/sessionDataUser/sessionUserName";

@@ -10,7 +10,7 @@ const DashBoardData = () => {
         const id = Cookies.get("userid");
         if (id) {
           const response = await axios.get(
-            `http://localhost:4000/dataUserRoutes/fetchUserData/${id}`
+            `https://cashout-backend-kjtw.onrender.com/dataUserRoutes/fetchUserData/${id}`
           );
           setData(response.data);
         } else {

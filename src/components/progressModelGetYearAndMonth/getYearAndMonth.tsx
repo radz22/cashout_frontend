@@ -1,4 +1,3 @@
-import React from "react";
 import DashBoardData from "../../hooks/dashBoardData";
 const getYearAndMonthData = (year: string) => {
   const { data } = DashBoardData();

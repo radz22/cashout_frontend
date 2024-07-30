@@ -19,14 +19,17 @@ const createUser = () => {
     try {
       setCreateLoading(true);
       await axios
-        .post("http://localhost:4000/dataUserRoutes/create", {
-          userid: id,
-          date: date,
-          amount: amount,
-          referrence: referrence,
-          month: currentMonth,
-          year: currentYear,
-        })
+        .post(
+          "https://cashout-backend-kjtw.onrender.com/dataUserRoutes/create",
+          {
+            userid: id,
+            date: date,
+            amount: amount,
+            referrence: referrence,
+            month: currentMonth,
+            year: currentYear,
+          }
+        )
         .then(() => {
           handleSucessAlert("Sucess");
           setCreateLoading(false);

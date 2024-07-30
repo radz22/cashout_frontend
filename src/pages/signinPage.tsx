@@ -1,4 +1,3 @@
-import React from "react";
 import SignInForm from "../components/auth/signInForm";
 import { Link } from "react-router-dom";
 import { Toaster } from "react-hot-toast";

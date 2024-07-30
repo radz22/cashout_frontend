@@ -12,7 +12,7 @@ const Navbar = () => {
   const username: string | undefined = Cookies.get("username");
   userFetchingData(token);
 
-  const [navbar, setNavbar] = useState<navbarType[]>([
+  const [navbar] = useState<navbarType[]>([
     {
       label: "Dashboard",
       path: "/",

@@ -1,5 +1,4 @@
-import React from "react";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { Line } from "react-chartjs-2";
 import { defaults } from "chart.js/auto";
 defaults.maintainAspectRatio = false;
@@ -10,7 +9,7 @@ defaults.plugins.title.color = "black";
 import InputLabel from "@mui/material/InputLabel";
 import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
-import Select, { SelectChangeEvent } from "@mui/material/Select";
+import Select from "@mui/material/Select";
 import getYearAndMonthData from "../progressModelGetYearAndMonth/getYearAndMonth";
 const ProgressModel = () => {
   const currentYear = new Date().getFullYear().toString();

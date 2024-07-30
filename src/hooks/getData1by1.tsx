@@ -9,7 +9,9 @@ const getData1by1 = () => {
   const handleDataOfOne = (id: string) => {
     try {
       axios
-        .get(`http://localhost:4000/dataUserRoutes/fetchdata1by1/${id}`)
+        .get(
+          `https://cashout-backend-kjtw.onrender.com/dataUserRoutes/fetchdata1by1/${id}`
+        )
         .then((res) => {
           setDataOfOne(res.data);
         })
